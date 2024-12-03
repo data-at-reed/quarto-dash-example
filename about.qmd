@@ -1,0 +1,52 @@
+---
+title: "Dashboard"
+author: "Presented by the DataLab"
+format:
+  dashboard:
+    orientation: columns
+editor_options: 
+  chunk_output_type: console
+---
+
+Some heading text can go here.
+
+## Column {width=70%}
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+
+ggplot(data = penguins, aes(x = body_mass_g, 
+                            y = flipper_length_mm,
+                            color = species)) +
+  geom_point()
+```
+
+
+## Column {width=30%}
+
+
+::: {.card title="Weight"}
+Table of penguin body mass:
+```{r}
+library(gt)
+
+penguins |>
+  na.omit() |>
+  group_by(species) |>
+  summarize(mean_weight = mean(body_mass_g)) |>
+  gt()
+```
+:::
+
+:::{.card title="Flipper"}
+Table of flipper length:
+```{r}
+penguins |>
+  na.omit() |>
+  group_by(species) |>
+  summarize(mean_flipper = mean(flipper_length_mm)) |>
+  gt()
+```
+:::

@@ -1,0 +1,28 @@
+---
+title: "<h1 style='text-align: center; text-decoration: underline; font-weight: bold; font-size: 2.5em;'>Welcome to R</h1>"
+title-block-banner: false 
+---
+
+## What is R?
+
+R is a computer language.
+
+RStudio is a program that makes it easier to use that language for projects. Usually when people say they are working with R they are opening RStudio and coding within its framework.
+
+To use RStudio at Reed you have two options: use the web-based version with your Reed login or download a copy of it to use on your personal computer. For more information on these see the [R\@Reed webpage](https://www.reed.edu/data-at-reed/r/r-at-reed/).
+
+Today it will probably be best to use Reed's R server unless you have already downloaded your own copy of R and RStudio. To connect to use the web-based version log in to the [Reed R server](https://rstudio.reed.edu/auth-sign-in?appUri=%2F).
+
+## What does RStudio look like?
+
+Typically when using RStudio you will see four panes. Using a metaphor of building a house instead for creating a graph, here is what each pane does:
+
+-   The Script (top left): This is the main window you work in. Type your code here. This is the only code that will save. You want this script to be something that you can press a button and run, so make sure it doesn't contain errors or extraneous code. It is like the blueprint for a house. It is something that you should be able to pass off to another person and they can understand and use it. (Comments help with this, more on that later.)
+
+-   The Console (bottom left): This is like your scratch paper. You can type code here, but it will not save. This area shows you error messages in red or displays your code in blue if it ran successfully.
+
+-   The Variable Environment (top right): This is like your inventory. Any variables that you create will show up here with a preview of what is inside them. So, if you load in a spreadsheet, you will be able to see its name and how many rows and columns it is here. The small broom icon is useful for clearing out all variables between projects.
+
+-   The Bottom Right: This window has many functions, but chief among them is displaying your finished product, so your metaphorical house or your literal graph. It also is where you can view what files and packages you are working with (more on those later). It's other great feature is the Help tab where you can see documentation for any R command. You can search for them or a good trick is to type `?[command]` into the console, for example `?sum` will explain what the `sum` function does.
+
+![](images/RStudio_panes.png){fig-align="center"}

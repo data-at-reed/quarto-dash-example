@@ -1,0 +1,72 @@
+project:
+  type: book
+
+book:
+  author: "Josie Griffin '09"
+  date: today
+  search: false
+  url: https://www.reed.edu/data-at-reed/
+
+  # navbar:
+  #   background: primary
+  #   left:
+  #     - href: https://www.reed.edu/data-at-reed/r/new-to-r/
+  #       text: "New to R? "
+  #     - href: https://www.reed.edu/data-at-reed/r/
+  #       text: "More R Help"
+
+  sidebar:
+    title: "Intro R Workshop"
+    style: "docked"
+  chapters:
+    - text: "Welcome to R"
+      href: index.qmd
+    - part: "R Basics"
+      chapters:
+        - run_code.qmd
+        - variables.qmd
+        - loading_data.qmd
+        - viewing_data.qmd
+    - part: "Excel Things in R"
+      chapters: 
+        - column_math.qmd
+        - rename.qmd
+        - filter.qmd
+        - group_summarize.qmd
+        - function_exercise.qmd
+
+    - part: "Graphing in R"
+      chapters: 
+        - graphs.qmd
+        - scatterplots.qmd
+        - boxplots.qmd
+        - graph_exercise.qmd
+
+
+
+format:
+  html:
+    toc: false
+    number-sections: false
+    include-before-body: add_ons.html 
+    css: styles.css
+    title-block-banner: false
+
+
+# Set the language that should be used for Quarto book
+# https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/language
+# lang: en
+
+# Set default options for every webpage that may or may not include webR.
+webr: 
+  show-startup-message: false     # Display status of webR initialization
+#  show-header-message: false     # Check to see if COOP&COEP headers are set for speed.
+  packages: ['ggplot2', 'dplyr'] # Pre-install dependencies
+#  base-url: ''                   # Base URL used for specifying where R WebAssembly binaries should be located
+#  home-dir: '/home/rstudio'      # Customize where the working directory is
+#  channel-type: 'post-message'   # Specify communication channel
+#  service-worker-url: ''         # URL from where to load JavaScript worker scripts when loading webR with the ServiceWorker communication channel.
+
+# Attach webR to every page
+filters:
+  - webr
